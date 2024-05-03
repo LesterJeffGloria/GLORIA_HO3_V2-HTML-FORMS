@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff3cd;
+}
+
+.header {
+    background-color: #ffdc9f;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0.7rem 10%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logoimage {
+    border-radius: 50%;
+    height: 15%;
+    width: 15%;
+}
+
+.navbar a {
+    font-family: "Verdana";
+    font-weight: bolder;
+    font-size: 18px;
+    text-decoration: none;
+    color: #744b06;
+    margin-left: 3.5rem;
+}
+
+.navbar a:hover {
+    color: #cd8f1b;
+}
+
+.slider-container {
+    background-color: #996100;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+}
+
+.restaurant-background {
+    width: 100%;
+    display: flex;
+}
+
+.restaurant-background img {
+    width: 100%;
+    height: 550px;
+    transition: all 0.10s ease;
+    border: 5px solid #ffd27d;
+    margin-top: 15px;
+
+}
+
+.restaurant-background input{
+    display: none;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dots label {
+    height: 15px;
+    width: 15px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.10s ease;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dots label:hover {
+    background-color: #ffffff;
+}
+
+#lestaurant-pic-one:checked ~ .pic1 {
+    margin-left: 0;
+}
+#lestaurant-pic-two:checked ~ .pic2 {
+    margin-left: -100%;
+}
+#lestaurant-pic-three:checked ~ .pic3 {
+    margin-left: -200%;
+}
+
+.start-button input[type="button"] {
+    width: 15%;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-family: "Verdana";
+    font-size: 15px;
+    color: #563600;
+    background-color: #ffd895;
+    border: 3px solid #000000;
+    float: right;
+    cursor: pointer;
+}
+
+.start-button input[type="button"]:hover{
+    background-color: #ffe7bb;
+}
+
+.best-seller-container {
+    background-color: #654000;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding: 25px;
+}
+
+.best-seller-name {
+    font-family: "Verdana";
+    font-size: 40px;
+    color: #ffd27d;
+    margin-bottom: 25px;
+}
+
+.best-seller-italian,
+.best-seller-chinese,
+.best-seller-healthyoption,
+.best-seller-mexican,
+.best-seller-special {
+    display: inline-block;
+    background-color: #ffd27d;
+    border-radius: 10%;
+    width: 270px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.best-seller-italian .food-category,
+.best-seller-chinese .food-category,
+.best-seller-healthyoption .food-category,
+.best-seller-mexican .food-category,
+.best-seller-special .food-category {
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.best-seller-italian img,
+.best-seller-chinese img,
+.best-seller-healthyoption img,
+.best-seller-mexican img,
+.best-seller-special img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    padding: 5px;
+}
+
+.best-seller-italian .menu-name,
+.best-seller-chinese .menu-name,
+.best-seller-healthyoption .menu-name,
+.best-seller-mexican .menu-name,
+.best-seller-special .menu-name {
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 25px;
+    color: brown;
+    margin-bottom: 5px;
+}
+
+.best-seller-italian .price,
+.best-seller-chinese .price,
+.best-seller-healthyoption .price,
+.best-seller-mexican .price,
+.best-seller-special .price {
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 20px;
+    color: #784c00;
+    margin-bottom: 5px;
+}
+
+.new-products-container {
+    background-color: #ffd27d;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding: 25px;
+}
+
+.new-products-name {
+    font-family: "Verdana";
+    font-size: 40px;
+    color: #654000;
+    margin-bottom: 25px;
+}
+
+.new-products-italian,
+.new-products-chinese,
+.new-products-special {
+    display: inline-block;
+    background-color: #654000;
+    border-radius: 10%;
+    width: 270px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+
+.new-products-italian img,
+.new-products-chinese img,
+.new-products-special img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    padding: 5px;
+}
+
+.new-products-italian .menu-name,
+.new-products-chinese .menu-name,
+.new-products-special .menu-name {
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 25px;
+    color: #fdd068;
+    margin-bottom: 15px;
+}
+
+.full-menu-container {
+    background-color: #563a01;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.full-menu-name {
+    font-family: "Verdana";
+    font-size: 40px;
+    color: #ffd167;
+    padding-top: 15px;
+}
+
+.full-menu-italian,
+.full-menu-chinese,
+.full-menu-healthy-options,
+.full-menu-mexican,
+.full-menu-specials {
+    display: inline-block;
+    background-color: #ffd167;
+    border-radius: 10%;
+    width: 270px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.full-menu-italian img,
+.full-menu-chinese img,
+.full-menu-healthy-options img,
+.full-menu-mexican img,
+.full-menu-specials img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    padding: 5px;
+}
+
+.full-menu-italian .name-of-food,
+.full-menu-chinese .name-of-food,
+.full-menu-healthy-options .name-of-food,
+.full-menu-mexican .name-of-food,
+.full-menu-specials .name-of-food {
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 15px;
+    color: brown;
+    margin-bottom: 5px;
+}
+
+.full-menu-italian .price-of-food,
+.full-menu-chinese .price-of-food,
+.full-menu-healthy-options .price-of-food,
+.full-menu-mexican .price-of-food,
+.full-menu-specials .price-of-food {
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 20px;
+    color: #784c00;
+    margin-bottom: 5px;
+}
+
+.about-container {
+    background-color: #fff3cd;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    margin-top: 100px;
+}
+
+.aboutlogoimage {
+    border-radius: 50%;
+    border: 5px solid #070707;
+    width: 20%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name-of-restaurant {
+    font-size: 40px;
+    font-family: "Verdana";
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: brown;
+}
+
+.description-of-restaurant {
+    font-size: 40px;
+    font-family: "Roboto";
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.basic-info-of-restaurant {
+    font-size: 25px;
+    font-family: "Verdana";
+    font-weight: bold;
+    text-align: center;
+    color: #8f5b02;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    background-color: #fff3cd;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.menu { 
+    font-size: 50px;
+    font-family: "Verdana";
+    font-weight: bold;
+    text-align: center;
+    color: brown;
+    padding-top: 10px;
+}
+
+.gallery-italian,
+.gallery-chinese,
+.gallery-healthy-options,
+.gallery-mexican,
+.gallery-specials {
+    display: inline-block;
+    border: 5px solid #000000;
+    border-radius: 10%;
+    background-color: #8a5b04;
+    width: 350px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.gallery-italian:hover,
+.gallery-chinese:hover,
+.gallery-healthy-options:hover,
+.gallery-mexican:hover,
+.gallery-specials:hover {
+    border: 5px solid #ffb301;
+}
+
+.gallery-italian .name-of-food,
+.gallery-chinese .name-of-food,
+.gallery-healthy-options .name-of-food,
+.gallery-mexican .name-of-food,
+.gallery-specials .name-of-food {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "Verdana";
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-italian .price-of-food,
+.gallery-chinese .price-of-food,
+.gallery-healthy-options .price-of-food,
+.gallery-mexican .price-of-food,
+.gallery-specials .price-of-food {
+    text-align: center;
+    color: #ffc233;
+    font-size: 25px;
+    font-family: "Verdana";
+    margin-bottom: 10px;
+}
+
+.gallery-italian img,
+.gallery-chinese img,
+.gallery-healthy-options img,
+.gallery-mexican img,
+.gallery-specials img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.order-button input[type="button"] {
+    width: 30%;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-family: "Verdana";
+    font-size: 15px;
+    color: #563600;
+    background-color: #ffd895;
+    border: 3px solid #000000;
+}
+
+.order-button input[type="button"]:hover {
+    background-color: #ffe7bb;
+}
+
+.signin-container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-row {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="password"] {
+    border: 2px solid #000000;
+    width: 25%;
+    font-size: 15px;
+    font-family: "Verdana";
+    padding: 5px;
+}
+
+.form-row label {
+    margin-bottom: 10px;
+    font-family: "Verdana";
+    font-size: 17px;
+    font-weight: bold;
+    color: #463100;
+    margin-right: 10px;
+
+}
+
+.button-form-row input[type="button"] {
+    border: 2px solid #000000;
+    background-color: #744b06;
+    color: white;
+    width: 33%;
+    font-size: 15px;
+    font-family: "Verdana";
+    padding: 5px;
+}
+
+.button-form-row input[type="button"]:hover {
+    background-color: #915c00;
+}
+
+footer {
+    background-color: #fbe8c9;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.about-phone-icons i,
+.about-location-icons i {
+    font-size: 20px;
+    color: #563a01;
+}
+
+.about-phone-icons p,
+.about-location-icons p {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: "Verdana";
+    color: #000000;
+    margin-left: 20px;;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media-icons a {
+    background-color: #563a01;
+    border-radius: 50%;
+    margin: 15px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.social-media-icons i {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.social-media-icons a:hover {
+    background-color: #000000;
+}
+
+.social-media-icons a:hover i {
+    color: #cd8f1b;
+}
+
+.footer-nav,
+.stay-connected {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav p,
+.stay-connected p{
+    display: flex;
+} 
+
+.footer-nav p a,
+.stay-connected p a {
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #563a01;
+    font-family: "Verdana";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footer-nav p a:hover,
+.stay-connected p a:hover {
+    color: #cd8f1b;
+}
+
+.footer-bottom {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #000000;
+    font-family: "Verdana";
+    font-size: 15px;
+}
